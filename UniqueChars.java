@@ -16,16 +16,9 @@ public class UniqueChars {
 
 
         for (int i = 0; i < s.length(); ++i) {
-            if (s.charAt(i) != ' ') {
+            if (newstring.indexOf(s.charAt(i)) == -1 || s.charAt(i) == ' ') {
                 newstring += s.charAt(i);
-                continue;
             }
-
-            if (newstring.indexOf(s.charAt(i)) != -1) {
-                continue;
-            }
-
-            newstring += s.charAt(i);
         }
         return newstring;
     }
