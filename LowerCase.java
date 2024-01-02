@@ -16,7 +16,7 @@ public class LowerCase {
 
         for (int i = 0; i < s.length(); ++i) {
             if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
-                lowercase += s.charAt(i) - ('a' - 'A');
+                lowercase += (char)((int)s.charAt(i) + ((int)'a' - (int)'A'));
             }
             else {
                 lowercase += s.charAt(i);
