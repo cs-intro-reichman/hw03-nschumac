@@ -30,8 +30,7 @@ public class Calendar1 {
 	 // If the month changes, sets the number of days in this month.
 	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
 	 private static void advance() {
-		// Replace this comment with your code
-        Calendar1.dayOfWeek = Calendar1.dayOfWeek % 8 == 0 ? 1 : Calendar1.dayOfWeek++;
+        Calendar1.dayOfWeek = Calendar1.dayOfWeek % 8 == 0 ? 1 : Calendar1.dayOfWeek + 1;
         Calendar1.dayOfMonth++;
         if (Calendar1.dayOfMonth > nDaysInMonth(Calendar1.month, Calendar1.year)) {
             Calendar1.dayOfMonth = 1;
