@@ -41,7 +41,7 @@ public class Calendar0 {
             case 2: // february
                 return isLeapYear(year) ? 29 : 28;
             case 4: // april
-            case 5: // june
+            case 6: // june
             case 9: // september
             case 11: // november
                 return 30;
