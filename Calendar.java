@@ -1,7 +1,7 @@
 /**
  * Prints the calendars of all the years in the 20th century.
  */
-public class Calendar1 {
+public class Calendar {
     // Starting the calendar on 1/1/1900
     static int dayOfMonth = 1;
     static int month = 1;
@@ -15,22 +15,18 @@ public class Calendar1 {
      * period.
      */
     public static void main(String args[]) {
-        int firstSundayCounter = 0;
-        while (Calendar1.year < 2000) {
-            if (Calendar1.dayOfMonth == 1
-                    && Calendar1.dayOfWeek == 1) {
-                firstSundayCounter++;
+        int calendarYear = Integer.parseInt(args[0]);
+
+        while (Calendar.year < calendarYear + 1) {
+            if (Calendar.year == calendarYear) {
+                System.out.println(Calendar.dayOfMonth + "\\"
+                        + Calendar.month + "\\"
+                        + Calendar.year
+                        + (Calendar.dayOfWeek == 1 ? " sunday"
+                                : ""));
             }
-            System.out.println(Calendar1.dayOfMonth + "\\"
-                    + Calendar1.month + "\\"
-                    + Calendar1.year
-                    + (Calendar1.dayOfWeek == 1 ? " sunday"
-                            : ""));
             advance();
         }
-        System.out.println("During the 20th century, "
-                + firstSundayCounter
-                + " Sundays fell on the first day of the month");
     }
 
     // Advances the date (day, month, year) and the day-of-the-week.
@@ -38,19 +34,19 @@ public class Calendar1 {
     // Side effects: changes the static variables dayOfMonth, month, year,
     // dayOfWeek, nDaysInMonth.
     private static void advance() {
-        Calendar1.dayOfWeek++;
-        if (Calendar1.dayOfWeek > 7) {
-            Calendar1.dayOfWeek = 1;
+        Calendar.dayOfWeek++;
+        if (Calendar.dayOfWeek > 7) {
+            Calendar.dayOfWeek = 1;
         }
-        Calendar1.dayOfMonth++;
-        if (Calendar1.dayOfMonth > nDaysInMonth(
-                Calendar1.month, Calendar1.year)) {
-            Calendar1.dayOfMonth = 1;
-            Calendar1.month++;
+        Calendar.dayOfMonth++;
+        if (Calendar.dayOfMonth > nDaysInMonth(
+                Calendar.month, Calendar.year)) {
+            Calendar.dayOfMonth = 1;
+            Calendar.month++;
 
-            if (Calendar1.month > 12) {
-                Calendar1.month = 1;
-                Calendar1.year++;
+            if (Calendar.month > 12) {
+                Calendar.month = 1;
+                Calendar.year++;
             }
         }
     }
