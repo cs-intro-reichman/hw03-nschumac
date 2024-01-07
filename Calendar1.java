@@ -21,8 +21,8 @@ public class Calendar1 {
                     && Calendar1.dayOfWeek == 1) {
                 firstSundayCounter++;
             }
-            System.out.println(Calendar1.dayOfMonth + "\\"
-                    + Calendar1.month + "\\"
+            System.out.println(Calendar1.dayOfMonth + "/"
+                    + Calendar1.month + "/"
                     + Calendar1.year
                     + (Calendar1.dayOfWeek == 1 ? " Sunday"
                             : ""));

@@ -14,8 +14,8 @@ public class Calendar {
 
         while (Calendar.year < calendarYear + 1) {
             if (Calendar.year == calendarYear) {
-                System.out.println(Calendar.dayOfMonth + "\\"
-                        + Calendar.month + "\\"
+                System.out.println(Calendar.dayOfMonth + "/"
+                        + Calendar.month + "/"
                         + Calendar.year
                         + (Calendar.dayOfWeek == 1 ? " Sunday"
                                 : ""));
