@@ -24,7 +24,7 @@ public class Calendar1 {
             System.out.println(Calendar1.dayOfMonth + "\\"
                     + Calendar1.month + "\\"
                     + Calendar1.year
-                    + (Calendar1.dayOfWeek == 1 ? " sunday"
+                    + (Calendar1.dayOfWeek == 1 ? " Sunday"
                             : ""));
             advance();
         }
